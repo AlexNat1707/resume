@@ -1,0 +1,67 @@
+<div>
+    <h1>Web
+        {{#with web}}</h1>
+    <p>
+    <h2>Languages:</h2>
+    </p>
+    {{#each languages}}
+    <ul>
+        <li><b>Name:</b> {{this.name}}</li>
+        <li><b>Version:</b> {{this.version}}</li>
+        <li><b>Description:</b> {{this.description}}</li>
+        <li>{{#if this.elements}}<b>Elements:</b>
+            {{#each this.elements}}
+            <ul>
+                <li><b>Name:</b> {{this.name}}</li>
+                <li><b>Description:</b> {{this.description}}</li>
+                <li><b>Attributes:</b>
+                    {{#each this.attributes}}
+                    <ul>
+                        <li> {{name}} - {{description}}</li>
+                    </ul>
+                    {{/each}}
+                </li>
+            </ul>
+            {{/each}}
+            {{/if}}
+
+            {{#if this.properties}}<b>Properties:</b>
+            {{#each this.properties}}
+            <ul>
+                <li><b>Name:</b> {{this.name}}</li>
+                <li><b>Description:</b> {{this.description}}</li>
+                <li><b>Values:</b>
+                    {{#each this.values}}
+                    <ul>
+                        <li>{{value}} - {{description}}</li>
+                    </ul>
+                    {{/each}}
+                </li>
+            </ul>
+            {{/each}}
+            {{/if}}
+
+            {{#if this.functions}}<b>Functions:</b>
+            {{#each this.functions}}
+            <ul>
+                <li><b>Name:</b> {{this.name}}</li>
+                <li><b>Description:</b> {{this.description}}</li>
+                <li><b>Parameters:</b>
+                    {{#each this.parameters}}
+                    <ul>
+                        <li>{{name}} - {{type}} - {{description}}</li>
+                    </ul>
+                    {{/each}}
+                </li>
+            </ul>
+            {{/each}}
+            {{/if}}
+        </li>
+
+
+    </ul>
+    {{/each}}
+    {{/with}}
+
+
+</div>
