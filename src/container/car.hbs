@@ -1,0 +1,232 @@
+<div>
+    <h1>{{make}}</h1>
+    <p><b>Model:</b> {{model}}</p>
+    <p><b>Year:</b> {{year}}</p>
+    <p><b>Color:</b> {{color}}</p>
+    <hr>
+    <hr>
+    <div>
+        <p><b>Features:</b></p>
+        {{#with features}}
+        <p><b>Interior: </b></p>
+        {{#with interior}}
+        <ul>
+            <br>
+            <li>
+                <p><b>Seats:</b></p>
+            </li>
+            {{#with seats}}
+            <ul>
+                <li>Material: {{this.material}}</li>
+                <li>Color: {{this.color}}</li>
+                <li>Heated: {{#if this.heated}}
+                    (наявно)
+                    {{/if}}
+                </li>
+                <li>Ventilated: {{#if this.ventilated}}
+                    (наявно)
+                    {{/if}}
+                </li>
+            </ul>
+            {{/with}}
+            <br>
+            <li>
+                <p><b>Dashboard:</b></p>
+            </li>
+            {{#with dashboard}}
+            <ul>
+                <li>Material: {{this.material}}</li>
+                <li>Color: {{this.color}}</li>
+                <li>Display: {{#with this.display}}
+                    <ul>
+                        <li>Type: {{this.type}}</li>
+                        <li>Size: {{this.size}}</li>
+                        <li>Resolution: {{this.resolution}}</li>
+                        <li>Touchscreen: {{#if this.touchscreen}}
+                            (наявно)
+                            {{/if}}
+                        </li>
+                    </ul>
+                    {{/with}}
+                </li>
+            </ul>
+            {{/with}}
+            <br>
+            <li>
+                <p><b>Audio:</b></p>
+            </li>
+            {{#with audio}}
+            <ul>
+                <li>System: {{this.system}}</li>
+                <li>Speakers: {{this.speakers}}</li>
+                <li>Subwoofer: {{#if this.subwoofer}}
+                    (наявно)
+                    {{/if}}
+                </li>
+                <li>Bluetooth: {{#if this.bluetooth}}
+                    (наявно)
+                    {{/if}}
+                </li>
+                <li>USB: {{#if this.USB}}
+                    (наявно)
+                    {{/if}}
+                </li>
+            </ul>
+            {{/with}}
+        </ul>
+        {{/with}}
+
+        <br>
+        <hr>
+
+        <p><b>Exterior: </b></p>
+        {{#with exterior}}
+        <ul>
+            <li><b>Wheels:</b></li>
+            {{#with wheels}}
+            <ul>
+                <li>Size: {{size}}</li>
+                <li>Type: {{type}}</li>
+                <li>Color: {{color}}</li>
+            </ul>
+            {{/with}}
+        </ul>
+        <ul>
+            <li><b>Headlights:</b></li>
+            {{#with headlights}}
+            <ul>
+                <li>Type: {{type}}</li>
+                <li>Brightness: {{brightness}}</li>
+                <li>Automatic:
+                    {{#if this.automatic}}
+                    (наявно)
+                    {{/if}}
+                </li>
+            </ul>
+            {{/with}}
+        </ul>
+        <ul>
+            <li><b>Sunroof:</b></li>
+            {{#with sunroof}}
+            <ul>
+                <li>Type: {{type}}</li>
+                <li>Size: {{size}}</li>
+                <li>Automatic:
+                    {{#if this.automatic}}
+                    (наявно)
+                    {{/if}}
+                </li>
+            </ul>
+            {{/with}}
+        </ul>
+        {{/with}}
+
+        <br>
+        <hr>
+
+        <p><b>Safety:</b></p>
+        {{#with safety}}
+        <ul>
+            <li><b>Airbags:</b></li>
+            {{#with airbags}}
+            <ul>
+                <li>Front: {{front}}</li>
+                <li>Side: {{side}}</li>
+                <li>Knee: {{knee}}</li>
+                <li>Rear: {{rear}}</li>
+            </ul>
+            {{/with}}
+        </ul>
+        <ul>
+            <li><b>Assistance:</b></li>
+            {{#with assistance}}
+            <ul>
+                <li>Bind Spot Monitoring:
+                    {{#if this.blind_spot_monitoring}}
+                    (наявно)
+                    {{/if}}
+                </li>
+                <li>Rear Cross Traffic Alert:
+                    {{#if this.rear_cross_traffic_alert}}
+                    (наявно)
+                    {{/if}}
+                </li>
+                <li>Lane Departure Warning:
+                    {{#if this.lane_departure_warning}}
+                    (наявно)
+                    {{/if}}
+                </li>
+                <li>Adaptive Cruise Control:
+                    {{#if this.adaptive_cruise_control}}
+                    (наявно)
+                    {{/if}}
+                </li>
+                <li>Collision Warning:
+                    {{#if this.collision_warning}}
+                    (наявно)
+                    {{/if}}
+                </li>
+            </ul>
+            {{/with}}
+        </ul>
+        {{/with}}
+        {{/with}}
+    </div>
+    <br>
+    <hr>
+    <hr>
+    <div>
+        <p><b>Engine:</b></p>
+        {{#with engine}}
+        <ul>
+            <li>Type: {{this.type}}</li>
+            <li>Displacement: {{this.displacement}}</li>
+            <li>Horsepower: {{this.horsepower}}</li>
+            <li>Torque: {{this.torque}}</li>
+            <li>Transmission:
+                {{#with this.transmission}}
+                <ul>
+                    <li>Type: {{this.type}}</li>
+                    <li>Gears: {{this.gears}}</li>
+                </ul>
+                {{/with}}
+            </li>
+        </ul>
+        {{/with}}
+    </div>
+    <hr>
+    <hr>
+    <div>
+        <p><b>Fuel Economy:</b></p>
+        {{#with fuel_economy}}
+        <ul>
+            <li>City: {{this.city}}</li>
+            <li>Highway: {{this.highway}}</li>
+            <li>Combined: {{this.combined}}</li>
+        </ul>
+        {{/with}}
+    </div>
+    <hr>
+    <hr>
+    <div>
+        <p><b>Price:</b></p>
+        {{#with price}}
+        <ul>
+            <li>Base: {{this.base}}</li>
+            <li>Destination: {{this.destination}}</li>
+            <li>Options:
+                {{#with this.options}}
+                <ul>
+                    <li>Navigation: {{this.navigation}}</li>
+                    <li>Moonroof: {{this.moonroof}}</li>
+                    <li>Premium paint: {{this.premium_paint}}</li>
+                </ul>
+                {{/with}}
+            </li>
+            <li>Total: {{this.total}}</li>
+        </ul>
+        {{/with}}
+    </div>
+    <hr>
+    <hr>
+</div>
