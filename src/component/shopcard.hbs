@@ -1,0 +1,19 @@
+<div class="row gy-5 gx-2">
+    {{#each cards}}
+    <div class="col-4 g-2">
+        <div class="card h-100">
+            <img class="card-img-top" src="{{image}}">
+            <div class="card-body">
+                <h6 class="card-title">{{title}}{{#if isHot}}
+                    <span class="badge text-bg-warning rounded-pill text-uppercase">hot!</span>
+                    {{/if}}
+                    {{#if idNew}}
+                    <span class="badge text-bg-primary rounded-pill">Топ</span>
+                    {{/if}}
+                </h6>
+                <p class=" mb-1 pb-1">{{description}}</p>
+            </div>
+        </div>
+    </div>
+    {{/each}}
+</div>

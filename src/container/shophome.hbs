@@ -1,30 +1,4 @@
 <main>
-    <nav>
-        <div class="row">
-            <div class="col-12">
-                <div class="card p-3">
-                    {{#with navigation}}
-                    <div class="nav">
-                        <div class="col-8">
-                            <div class="nav-item">
-                                <h4 class="card-title">{{Logo}}</h2>
-                            </div>
-                        </div>
-                        <div class="col-4">
-                            <div class="nav justify-content-end">
-                                {{#each links}}
-                                <div class="nav-item">
-                                    <a href="{{href}}" class="nav-link text-end">{{text}}</a>
-                                </div>
-                                {{/each}}
-                            </div>
-                        </div>
-                    </div>
-                    {{/with}}
-                </div>
-            </div>
-        </div>
-    </nav>
 
     <section class="row mt-5">
         <div class="col-12">
@@ -81,27 +55,7 @@
         </div>
 
         <div class="col-12">
-            <div class="row gy-5 gx-2">
-                {{#each cards}}
-                <div class="col-4">
-                    <div class="card h-100">
-                        <img class="card-img-top" src="{{image}}">
-                        <div class="card-body">
-                            <div>
-                                <h6 class="card-title">{{title}}{{#if isHot}}
-                                    <span class="badge text-bg-warning rounded-pill text-uppercase">hot!</span>
-                                    {{/if}}
-                                    {{#if idNew}}
-                                    <span class="badge text-bg-primary rounded-pill">Топ</span>
-                                    {{/if}}
-                                </h6>
-                            </div>
-                            <p class=" mb-1 pb-1">{{description}}</p>
-                        </div>
-                    </div>
-                </div>
-                {{/each}}
-            </div>
+            {{> shopcard}}
         </div>
         {{/with}}
     </section>
@@ -136,67 +90,4 @@
 
     <hr class="my-5">
 
-    <section>
-        {{#with service}}
-        <div class="row">
-            <div class="col-12">
-                <div>
-                    <div class="card text-bg-success">
-                        <div class="row">
-                            <div class="col-12">
-                                <div class="card-body text-center p-2">
-                                    <h2 class="card-title text-center">{{title}}</h2>
-                                    <p class="card-text text-center">{{description}}</p>
-                                    {{#each buttons}}
-                                    <a href="{{link}}" class="btn btn-primary">{{text}}</a>
-                                    {{/each}}
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        {{/with}}
-    </section>
-
-    <hr class="my-5">
-
-
-    <footer>
-        <div class="row">
-            <div class="col-12">
-                <div class="nav">
-                    <div class="col-3">
-                        <div class="nav-item">
-                            {{#each footer}}
-                            <a href="{{0.link}}" class="nav-link">{{0.text}}</a>
-                            {{/each}}
-                        </div>
-                    </div>
-                    <div class="col-3">
-                        <div class="nav-item">
-                            {{#each footer}}
-                            <a href="{{1.link}}" class="nav-link">{{1.text}}</a>
-                            {{/each}}
-                        </div>
-                    </div>
-                    <div class="col-3">
-                        <div class="nav-item">
-                            {{#each footer}}
-                            <a href="{{2.link}}" class="nav-link">{{2.text}}</a>
-                            {{/each}}
-                        </div>
-                    </div>
-                    <div class="col-3">
-                        <div class="nav-item">
-                            {{#each footer}}
-                            <a href="{{3.link}}" class="nav-link">{{3.text}}</a>
-                            {{/each}}
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </footer>
 </main>
