@@ -1,0 +1,93 @@
+<main>
+
+    <section class="row mt-5">
+        <div class="col-12">
+            <div class="row md-3">{{#with newsBlock}}</div>
+            <h2 class="text-center">{{title}}</h2>
+            <section class="col-12">
+                <div class="row g-2 mt-3">
+                    {{#each cards}}
+                    <div class="col-3">
+                        <div class="card h-100 text-bg-dark">
+                            <div class="card-header">{{title}}
+                                {{#if isTop}}
+                                <span class="badge text-bg-success rounded-pill">Нова</span>
+                                {{/if}}
+                                {{#if idNew}}
+                                <span class="badge text-bg-danger rounded-pill">Топ</span>
+                                {{/if}}
+                            </div>
+                            <div class="card-body">
+                                <p>{{description}}</p>
+                            </div>
+                        </div>
+                    </div>
+                    {{/each}}
+                </div>
+            </section>
+            {{/with}}
+        </div>
+    </section>
+
+    <hr class="my-5">
+
+    <section>
+        {{#with goodsBlock}}
+        <div class="col-12 mb-5">
+            <div class="nav nav-tabs">
+                {{#each tabs}}
+                {{#if isActive}}
+                <div class="nav-item">
+                    <a href="#" class="nav-link active">{{text}}</a>
+                </div>
+                {{else}}
+                <div class="nav-item">
+                    <a href="#" class="nav-link">{{text}}</a>
+                </div>
+                {{/if}}
+                {{#if isDisabled}}
+                <div class="nav-item">
+                    <a href="#" class="nav-link disabled">{{text}}</a>
+                </div>
+                {{/if}}
+                {{/each}}
+            </div>
+        </div>
+
+        <div class="col-12">
+            {{> shopcard}}
+        </div>
+        {{/with}}
+    </section>
+
+    <hr class="my-5">
+
+    <section>
+        {{#with subscribe}}
+        <div class="row">
+            <div class="col-12">
+                <div>
+                    <div class="card text-bg-dark">
+                        <div class="row">
+                            <div class="col-8">
+                                <div class="card-body">
+                                    <h2 class="card-title">{{header}}</h2>
+                                    <p class="card-text">{{description}}</p>
+                                </div>
+                            </div>
+                            <div class="col-4 pt-4 ps-4">
+                                {{#each buttons}}
+                                <a href="{{link}}" class="btn btn-primary">{{text}}</a>
+                                {{/each}}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        {{/with}}
+    </section>
+
+    <hr class="my-5">
+
+</main>
