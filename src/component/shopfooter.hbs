@@ -1,34 +1,14 @@
-<div class="row">
-    <div class="col-12">
-        <div class="nav">
-            <div class="col-3">
-                <div class="nav-item">
-                    {{#each footer}}
-                    <a href="{{0.link}}" class="nav-link {{#if @last}}disabled{{/if}}">{{0.text}}</a>
-                    {{/each}}
-                </div>
-            </div>
-            <div class="col-3">
-                <div class="nav-item">
-                    {{#each footer}}
-                    <a href="{{1.link}}" class="nav-link {{#if @last}}disabled{{/if}}">{{1.text}}</a>
-                    {{/each}}
-                </div>
-            </div>
-            <div class="col-3">
-                <div class="nav-item">
-                    {{#each footer}}
-                    <a href="{{2.link}}" class="nav-link {{#if @last}}disabled{{/if}}">{{2.text}}</a>
-                    {{/each}}
-                </div>
-            </div>
-            <div class="col-3">
-                <div class="nav-item">
-                    {{#each footer}}
-                    <a href="{{3.link}}" class="nav-link {{#if @last}}disabled{{/if}}">{{3.text}}</a>
-                    {{/each}}
-                </div>
+<section class="py-5">
+    <div class="row g4">
+        {{#each footer}}
+        <div class="col-2 mx-3">
+            <div class="card h-100 border-light d-flex flex-column justify-content-between">
+                {{#each this}}
+                <a href="{{this.link}}"
+                    class="{{#if @last}}nav-link disabled{{/if}} m-2 text-decoration-none">{{this.text}}</a>
+                {{/each}}
             </div>
         </div>
+        {{/each}}
     </div>
-</div>
+</section>

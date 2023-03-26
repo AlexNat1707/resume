@@ -1,0 +1,69 @@
+<main>
+    <section class="my-5">
+        <div class="row">
+            {{#with header}}
+            <h1 class="col-9">{{title}}</h1>
+            <div class="col-3">
+                {{#with button}}
+                <a href="{{link}}" class="btn btn-outline-secondary">{{text}}</a>
+                {{/with}}
+            </div>
+        </div>
+        {{/with}}
+    </section>
+    <hr class="my-5">
+    {{> cartGoodsItem}}
+    <hr class="my-5">
+    <section class="col-12 my-4">
+        {{#with total}}
+        <div class="row">
+            <div class="col-9">
+                <h3>{{title}}</h3>
+                <h1>{{amount}}</h1>
+                <div>{{delivery}}</div>
+            </div>
+            <div class="col-3">
+                {{#each buttons}}
+                <a href="{{link}}"
+                    class="btn {{#if isSuccess}}btn-success{{/if}}{{#if isOutline}}btn-outline-success{{/if}} my-2">{{text}}</a>
+                {{/each}}
+            </div>
+        </div>
+        {{/with}}
+    </section>
+    <hr class="my-5">
+    <section class="col-12">
+        {{#with goodsOtherBlock}}
+        <h2 class="text-center">{{this.title}}</h2>
+        <div class="my-5">
+            {{> shopcard}}
+        </div>
+        {{/with}}
+    </section>
+    <hr class="my-5">
+    <section>
+        {{#with subscribe}}
+        <div class="row">
+            <div class="col-12">
+                <div>
+                    <div class="card text-bg-dark">
+                        <div class="row">
+                            <div class="col-8">
+                                <div class="card-body">
+                                    <h2 class="card-title">{{header}}</h2>
+                                    <p class="card-text">{{description}}</p>
+                                </div>
+                            </div>
+                            <div class="col-4 pt-4 ps-4">
+                                {{#each buttons}}
+                                <a href="{{link}}" class="btn btn-primary">{{text}}</a>
+                                {{/each}}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        {{/with}}
+    </section>
+</main>
