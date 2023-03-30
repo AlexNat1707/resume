@@ -51,11 +51,11 @@
     </div>
     <br>
     <br>
-    <div class="card">
+    <div class="card m-2 p-2">
         <section>
             {{#with nested_display}}
             <div class="display-1">{{title}}</div>
-            <div class="card">
+            <div class="card m-3 p-3">
                 <div class="card-body">
                     {{#with children_display}}
                     <div class="display-4">{{title}}</div>
@@ -67,7 +67,7 @@
                 </div>
             </div>
             <br>
-            <div>
+            <div class="p-3">
                 <p>
                 <h6>{{header_text}}</h6>
                 </p>
@@ -80,7 +80,7 @@
     </div>
     <br>
     <br>
-    <div class="card">
+    <div class="card p-3">
         <section>
             {{#with paragraph}}
             <div class="text-uppercase">
@@ -99,7 +99,7 @@
                     {{/with}}
                 </button>
             </p>
-            <div class="card">
+            <div class="card m-3">
                 <div class="card-body">
                     {{#each list_name}}
                     <ul>

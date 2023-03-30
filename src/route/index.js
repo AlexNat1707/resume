@@ -3639,5 +3639,108 @@ router.get('/shopcatalog', function (req, res) {
 // ================================================================
 
 
+router.get('/index', function (req, res) {
+  // res.render генерує нам HTML сторінку
+
+  //            ↙ cюди вводимо назву файлу з сontainer
+  res.render('index', {
+    layout: "index",
+
+    person: { 
+      name: "Олександр",
+      surname: "Гнатюк",
+    },
+    project: "Резюме",
+    pageList: "Список сторінок",
+    description: "Дана сторінка представляє мій проєкт щодо практики HTML-верстки за допомогою шаблонізатора Handlebars, використовуючи бібліотеки стилів Bootstrap",
+    buttons: [
+          {
+            text: 'Work',
+            link: '/work',
+          },
+          {
+            text: 'Summary',
+            link: '/summary',
+          },
+          {
+            text: 'Skills',
+            link: '/skills',
+          },
+          {
+            text: 'Education',
+            link: '/education',
+          },
+          {
+            text: 'A. Einstein',
+            link: '/bio',
+          },
+          {
+            text: 'Car',
+            link: '/car',
+          },
+          {
+            text: 'Program',
+            link: '/program',
+          },
+          {
+            text: 'Web',
+            link: '/web',
+          },
+          {
+            text: 'JS',
+            link: '/js',
+          },
+          {
+            text: 'Description',
+            link: '/task21',
+          },
+          {
+            text: 'Our community',
+            link: '/task22',
+          },
+          {
+            text: 'Our website',
+            link: '/task31',
+          },
+          {
+            text: 'Our shop',
+            link: '/shophome',
+          },
+          {
+            text: 'Products',
+            link: '/shopproduct',
+          },
+          {
+            text: 'Shopnews',
+            link: '/shopnews',
+          },
+          {
+            text: 'Shoporder',
+            link: '/shoporder',
+          },
+          {
+            text: 'Shopcart',
+            link: '/shopcart',
+          },
+          {
+            text: 'Shopprofile',
+            link: '/shopprofile',
+          },
+          {
+            text: 'Shop Review',
+            link: '/shopreview',
+          },
+          {
+            text: 'Shop Catalog',
+            link: '/shopcatalog',
+          },
+        ],
+  })
+  //                  ↑↑ сюди вводимо JSON дані
+})
+
+// ================================================================
+
+
 // Підключаємо роутер до бек-енду
 module.exports = router
