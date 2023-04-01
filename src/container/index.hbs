@@ -7,13 +7,13 @@
     </section>
     <section>
         <div class="pb-3">
-            <div class="row">
+            <ul class="col-2">
                 {{#each buttons}}
-                <div class="col-3 g-3">
-                    <a href="{{link}}" class="btn btn-primary col-12">{{text}}</a>
-                </div>
+                <li class="row">
+                    <a href="{{link}}" class="btn btn-primary my-2">{{text}}</a>
+                </li>
                 {{/each}}
-            </div>
+            </ul>
         </div>
     </section>
 </main>
