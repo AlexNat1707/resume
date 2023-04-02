@@ -3903,7 +3903,7 @@ router.get('/index', function (req, res) {
     project: "Резюме",
     pageList: "Список сторінок",
     description: "Дана сторінка представляє мій проєкт щодо практики HTML-верстки за допомогою шаблонізатора Handlebars, використовуючи бібліотеки стилів Bootstrap",
-    buttons: [
+    buttonsResume: [
           {
             text: 'Work',
             link: '/work',
@@ -3920,6 +3920,8 @@ router.get('/index', function (req, res) {
             text: 'Education',
             link: '/education',
           },
+        ],
+    buttonsOther: [
           {
             text: 'Person',
             link: '/person',
@@ -3964,6 +3966,8 @@ router.get('/index', function (req, res) {
             text: 'Our website',
             link: '/task31',
           },
+        ],
+    buttonsShop: [
           {
             text: 'Our shop',
             link: '/shophome',

@@ -1,19 +1,48 @@
 <main>
     <section>
         <div class="py-4">
-            <h1>{{pageList}}</h1>
-            <p>{{description}}</p>
+            <h1 class="d-flex justify-content-center">{{pageList}}</h1>
+            <p class="d-flex justify-content-between">{{description}}</p>
         </div>
     </section>
     <section>
-        <div class="pb-3">
-            <ul class="col-2">
-                {{#each buttons}}
-                <li class="row">
-                    <a href="{{link}}" class="btn btn-primary my-2">{{text}}</a>
-                </li>
-                {{/each}}
-            </ul>
+        <div class="d-flex justify-content-between">
+            <div class="card col-4 m-2">
+                <div class="card-header">
+                    <h2 class="d-flex justify-content-center">Resume</h2>
+                </div>
+                <div class="card-body">
+                    <div class="row p-2">
+                        {{#each buttonsResume}}
+                        <a href="{{link}}" class="btn btn-primary my-2">{{text}}</a>
+                        {{/each}}
+                    </div>
+                </div>
+            </div>
+            <div class="card col-4 m-2">
+                <div class="card-header">
+                    <h2 class="d-flex justify-content-center">Shop</h2>
+                </div>
+                <div class="card-body">
+                    <div class="row p-2">
+                        {{#each buttonsShop}}
+                        <a href="{{link}}" class="btn btn-success my-2">{{text}}</a>
+                        {{/each}}
+                    </div>
+                </div>
+            </div>
+            <div class="card col-4 m-2">
+                <div class="card-header">
+                    <h2 class="d-flex justify-content-center">Other</h2>
+                </div>
+                <div class="card-body">
+                    <div class="row p-2">
+                        {{#each buttonsOther}}
+                        <a href="{{link}}" class="btn btn-warning my-2">{{text}}</a>
+                        {{/each}}
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
 </main>
