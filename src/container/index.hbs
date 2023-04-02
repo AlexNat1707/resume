@@ -1,17 +1,48 @@
-{{!--
-Це код container файлу для index сторінки,
-в якому міститься код, котрий буде віддаватися по шляху (PATH) - "/"
---}}
-
-<div class="p-5">
-    <h1>USB хаб Type C 12 в 1 HDMI VGA AUX 3.5 mm</h1>
-
-    <button type="button" class="btn btn-primary">Купити</button>
-</div>
-
-{{!--
-Цей код містить лише те, що буде виводитись в
-
-<body>
-    Адже наш layout/default.hbs має вже структуру HTML
-    --}}
+<main>
+    <section>
+        <div class="py-4">
+            <h1 class="d-flex justify-content-center">{{pageList}}</h1>
+            <p class="d-flex justify-content-between">{{description}}</p>
+        </div>
+    </section>
+    <section>
+        <div class="d-flex justify-content-between">
+            <div class="card col-4 m-2">
+                <div class="card-header">
+                    <h2 class="d-flex justify-content-center">Resume</h2>
+                </div>
+                <div class="card-body">
+                    <div class="row p-2">
+                        {{#each buttonsResume}}
+                        <a href="{{link}}" class="btn btn-primary my-2">{{text}}</a>
+                        {{/each}}
+                    </div>
+                </div>
+            </div>
+            <div class="card col-4 m-2">
+                <div class="card-header">
+                    <h2 class="d-flex justify-content-center">Shop</h2>
+                </div>
+                <div class="card-body">
+                    <div class="row p-2">
+                        {{#each buttonsShop}}
+                        <a href="{{link}}" class="btn btn-success my-2">{{text}}</a>
+                        {{/each}}
+                    </div>
+                </div>
+            </div>
+            <div class="card col-4 m-2">
+                <div class="card-header">
+                    <h2 class="d-flex justify-content-center">Other</h2>
+                </div>
+                <div class="card-body">
+                    <div class="row p-2">
+                        {{#each buttonsOther}}
+                        <a href="{{link}}" class="btn btn-warning my-2">{{text}}</a>
+                        {{/each}}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
